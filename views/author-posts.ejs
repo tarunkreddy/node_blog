@@ -1,0 +1,12 @@
+<html>
+<a href="/">Home</a>
+<br><br>
+<h1><%= author %>'s Posts</h1>
+<% for(var i = 0; i < posts.length; i++) { %>
+<h3><%= posts[i].title %></h3>
+<p><%= posts[i].body %></p>
+<hr>
+<% } %>
+
+
+</html>

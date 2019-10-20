@@ -1,0 +1,20 @@
+<html>
+
+<a href="/">Home</a>
+<br><br>
+
+<form action="/newpost" method="post">
+	Author:<input required type="text" name="author" id="author"><br><br>
+	Title:<input required type="text" name="title" id="title"><br><br>
+	Write Post Here:<br>
+	<textarea required rows="10" cols="100" name="blog_post" id="blog_post"></textarea><br><br>
+	<input type="submit" value="Submit">
+</form>
+
+<h2> Posts </h2>
+<% for(var i = 0; i < posts.length; i++) { %>
+<a href="posts/<%= posts[i].id %>"><%= posts[i].title %></a>
+By <a href="posts/<%= posts[i].author %>"><%= posts[i].author %></a>
+<hr>
+<% } %>
+</html>
